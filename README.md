@@ -34,11 +34,10 @@ Here are some examples:
 (defparameter *db* (treedb:make-alist-treedb))
 
 ;;set values:
-;;/:a/:1 <- "Hello"
-(setf (treedb:node *db* :a :1) "Hello"
-      (treedb:node *db* :a :2) :world
-      (treedb:node *db* :b) 1
-      (treedb:node *db* :c) '((1 . 2) (3 . 4)))
+(setf (treedb:node *db* :a :1) "Hello" ; /:a/:1 <- "Hello"
+      (treedb:node *db* :a :2) :world  ; /:a/:2 <- :world
+      (treedb:node *db* :b) 1          ; /:b <- 1
+      (treedb:node *db* :c) '((1 . 2) (3 . 4))) ; /:c <- '((1 . 2) (3 . 4))
 
 ;;get values
 (treedb:node *db* :a :1) ; => "Hello"

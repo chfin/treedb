@@ -477,14 +477,13 @@ or as a local project via quicklisp.</p>
 </span><span class="paren1">(<span class="code"><i><span class="symbol">defparameter</span></i> <span class="special">*db*</span> <span class="paren2">(<span class="code">treedb:make-alist-treedb</span>)</span></span>)</span>
 
 <span class="comment">;;set values:
-</span><span class="comment">;;/:a/:1 &lt;- "Hello"
-</span><span class="paren1">(<span class="code">setf <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:a</span> <span class="keyword">:1</span></span>)</span> <span class="string">"Hello"</span>
-      <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:a</span> <span class="keyword">:2</span></span>)</span> <span class="keyword">:world</span>
-      <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:b</span></span>)</span> 1
-      <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:c</span></span>)</span> '<span class="paren2">(<span class="code"><span class="paren3">(<span class="code">1 . 2</span>)</span> <span class="paren3">(<span class="code">3 . 4</span>)</span></span>)</span></span>)</span>
+</span><span class="paren1">(<span class="code">setf <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:a</span> <span class="keyword">:1</span></span>)</span> <span class="string">"Hello"</span> <span class="comment">; /:a/:1 &lt;- "Hello"
+</span>      <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:a</span> <span class="keyword">:2</span></span>)</span> <span class="keyword">:world</span>  <span class="comment">; /:a/:2 &lt;- :world
+</span>      <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:b</span></span>)</span> 1          <span class="comment">; /:b &lt;- 1
+</span>      <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:c</span></span>)</span> '<span class="paren2">(<span class="code"><span class="paren3">(<span class="code">1 . 2</span>)</span> <span class="paren3">(<span class="code">3 . 4</span>)</span></span>)</span></span>)</span> ; /:c &lt;- '<span class="paren1">(<span class="code"><span class="paren2">(<span class="code">1 . 2</span>)</span> <span class="paren2">(<span class="code">3 . 4</span>)</span></span>)</span>
 
-<span class="comment">;;get values
-</span><span class="paren1">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:a</span> <span class="keyword">:1</span></span>)</span> ; =&gt; "Hello"
+;;get values
+<span class="paren1">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:a</span> <span class="keyword">:1</span></span>)</span> ; =&gt; "Hello"
 
 ;;delete nodes
 <span class="paren1">(<span class="code">treedb:del-node <span class="special">*db*</span> <span class="keyword">:b</span></span>)</span>
