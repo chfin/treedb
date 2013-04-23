@@ -1,0 +1,121 @@
+/* inspired by github ;) */
+
+body {
+    font-family: Helvetica,arial,sans;
+    font-size: 14px;
+    color: rgb(51,51,51);
+    margin: 0 auto;
+    padding: 30px;
+    border-left: 1px solid rgb(204,204,204);
+    border-right: 1px solid rgb(204,204,204);
+    width: 860px;
+}
+
+a {
+    color: rgb(65, 131, 196);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 28px;
+    color: rgb(0,0,0)
+}
+
+h2 {
+    font-size: 24px;
+    color: rgb(0,0,0);
+    border-bottom: 1px solid rgb(204,204,204);
+}
+
+code, tt, pre {
+    font-size: 12px;
+    background-color: rgb(248,248,248);
+    border: 1px solid rgb(234,234,234);
+    border-radius: 3px 3px 3px 3px;
+    padding: 0px 5px;
+}
+
+pre code {
+    border: none;
+}
+
+pre {
+    display: block;
+    padding: 10px;
+    margin: 20px 5px 20px 5px;
+}
+
+.apiref-row {
+    padding-bottom: 1em;
+    display: block;
+    float: none;
+}
+
+.apiref-spec {
+    display: inline;
+    font-family: monospace;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+.apiref-lambda {
+    display: inline;
+    font-family: monospace;
+    text-transform: lowercase;
+}
+
+.apiref-result {
+    display: block;
+    /*font-family: monospace;*/
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.apiref-doc {
+    display: block;
+    float: none;
+    padding-left: 30px;
+    /*border-bottom: 1px solid rgb(204,204,204);*/
+    min-height: 1em;
+}
+
+.section-apiref-item {
+    border-bottom: 1px solid rgb(204,204,204);
+}
+
+/* syntax highlighting */
+
+.paren1, .paren2, .paren3, .paren4, .paren5,
+.paren6, .paren7, .paren8, .paren9, .paren10,
+.paren11, .paren12, .paren13, .paren14, .paren15,
+.paren16, .paren17, .paren18, .paren19, .paren20,
+.paren21, .paren22, .paren23, .paren24, .paren25,
+.paren26, .paren27, .paren28, .paren29, .paren30 {
+    color: rgb(51, 51, 51);
+}
+
+/*.code {
+    color: rgb(0, 128, 128);
+}*/
+
+
+.string {
+    color: rgb(221, 17, 68);
+}
+
+.keyword {
+    color: rgb(153, 0, 115);
+}
+
+.symbol {
+    /*color: rgb(0, 134, 179);*/
+    font-weight: bold;
+}
+
+.comment {
+    color: rgb(153, 153, 136);
+}
