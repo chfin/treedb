@@ -440,7 +440,8 @@ var HighlightLisp = new highlight_lisp();
 
 <h1>treedb</h1>
 
-<p>treedb is a simple database for hierarchical keys.</p>
+<p>treedb is a simple in-memory database for hierarchical keys.
+This means, your keys are structured like a path in a file system or a system regstry.</p>
 
 <h2>Features</h2>
 
@@ -475,7 +476,8 @@ or as a local project via quicklisp.</p>
 <pre><code><span class="code"><span class="comment">;;create a new instance
 </span><span class="paren1">(<span class="code"><i><span class="symbol">defparameter</span></i> <span class="special">*db*</span> <span class="paren2">(<span class="code">treedb:make-alist-treedb</span>)</span></span>)</span>
 
-<span class="comment">;;set values
+<span class="comment">;;set values:
+</span><span class="comment">;;/:a/:1 &lt;- "Hello"
 </span><span class="paren1">(<span class="code">setf <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:a</span> <span class="keyword">:1</span></span>)</span> <span class="string">"Hello"</span>
       <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:a</span> <span class="keyword">:2</span></span>)</span> <span class="keyword">:world</span>
       <span class="paren2">(<span class="code">treedb:node <span class="special">*db*</span> <span class="keyword">:b</span></span>)</span> 1
