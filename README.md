@@ -1,7 +1,7 @@
 # treedb
 
 treedb is a simple in-memory database for hierarchical keys.
-This means, your keys are structured like a path in a file system or a system regstry.
+This means, your keys are structured like a path in a file system or a system registry.
 
 ## Features
 
@@ -56,5 +56,5 @@ Here are some examples:
 (treedb:to-alist (treedb:subtree *db* :a))
   ; => ((:1 . "Hello") (:2 . :world))
 (treedb:to-json (treedb:subtree *db* :a))
-  ; => "{\"2\":\"Hello\",\"2\":\"world\"}"
+  ; => "{\"2\":\"world\",\"1\":\"Hello\"}"
 ```
